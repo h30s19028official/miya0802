@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>画面共有システム【サプライズ用】</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ログイン画面 -->
+  <div id="login-screen" class="fade">
+    <h2>ログイン</h2>
+    <input type="text" id="username" placeholder="ユーザー名" />
+    <input type="password" id="password" placeholder="パスワード" />
+    <button onclick="login()">ログイン</button>
+  </div>
+
+  <!-- メイン画面 -->
+  <div id="main-screen" class="fade hidden">
+    <div id="camera-toggle" class="camera-icon hidden" onclick="toggleCamera()">
+      📷
+    </div>
+    <div id="shared-content" class="fade hidden"></div>
+    <img id="placeholder-image" class="fade hidden" src="placeholder.jpg" alt="待機画像" />
+    <audio id="background-audio" src="background.mp3" loop></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
