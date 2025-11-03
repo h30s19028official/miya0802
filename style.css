@@ -1,0 +1,135 @@
+/* 全体の背景とフォント設定 */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  color: #333;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* フェードアニメーションと非表示制御 */
+.fade {
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+}
+
+/* ログイン画面のスタイル */
+#login-screen {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#login-screen h2 {
+  margin-bottom: 20px;
+  color: #6c5ce7;
+  font-size: 1.8rem;
+}
+
+#login-screen input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#login-screen input:focus {
+  border-color: #6c5ce7;
+  outline: none;
+}
+
+#login-screen button {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+#login-screen button:hover {
+  background: #a29bfe;
+}
+
+/* メイン画面のスタイル */
+#main-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* カメラアイコン */
+.camera-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.camera-icon:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* 画面共有の表示領域 */
+#shared-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 1;
+}
+
+#shared-content video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 待機中の画像 */
+#placeholder-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* 音声プレイヤーは非表示 */
+audio {
+  display: none;
+}
